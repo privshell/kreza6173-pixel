@@ -1,0 +1,36 @@
+name: Set topics
+
+on:
+  workflow_dispatch:
+
+jobs:
+  topics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply topics to every repository
+        env:
+          GH_TOKEN: ${{ secrets.TOPICS_TOKEN }}
+        run: |
+          apply() {
+            repo=$1; shift
+            for t in "$@"; do echo "$t"; done | jq -R . | jq -s '{names: .}' > body.json
+            n=$(gh api -X PUT "repos/kreza6173-pixel/$repo/topics" --input body.json --jq '.names | length')
+            echo "$repo: $n topics"
+          }
+          apply void-apps android app-manager shizuku no-root adb debloat bloatware-remover package-manager permission-manager appops autostart boot-receivers network-blocker apk-installer xapk app-snapshots kotlin jetpack-compose hyperos open-source
+          apply pulse-battery android battery battery-saver battery-life battery-optimization wakelock wakelock-detector doze doze-mode standby-buckets power-management backup app-backup shizuku root-optional no-root kotlin jetpack-compose f-droid open-source
+          apply void-purge android cleaner cache-cleaner junk-cleaner storage-cleaner free-space adb adb-shell shizuku dhizuku root no-root shevery shevery-modules xiaomi hyperos miui android-tools power-tools open-source
+          apply privacy-audit android privacy privacy-audit security-audit permissions app-permissions permission-manager appops android-privacy privacy-tools security adb shizuku no-root shevery shevery-modules webui android-tools app-audit open-source
+          apply void-autostart android autostart boot boot-manager startup-manager boot-receivers background-apps app-standby battery-saver performance shizuku adb no-root shevery shevery-modules xiaomi hyperos miui android-tools open-source
+          apply android-app-hub android awesome-list app-directory android-apps shizuku-apps root-apps shizuku dhizuku magisk termux python flask self-hosted dashboard aggregator changelog github-api offline-first catalog open-source
+          apply pulse-install android apk-installer apks xapk apkm split-apks app-installer package-installer bundle-installer sideload adb shizuku root no-root shevery shevery-modules local-web android-tools power-tools open-source
+          apply VOID-WALL android firewall android-firewall per-app-firewall iptables ip6tables network-security internet-blocker no-vpn data-usage privacy security root root-optional shizuku adb shevery shevery-modules network open-source
+          apply void-pulse android notifications notification-manager notification-filter dnd do-not-disturb auto-dnd focus-mode zen-mode automation productivity shizuku root no-root shevery shevery-modules xiaomi hyperos android-tools open-source
+          apply selinux-manager android selinux sepolicy selinux-policy avc-denials audit2allow permissive enforcing policy-editor kernelsu kernelsu-module kernelsu-next sukisu resukisu ksud root webui android-security security open-source
+          apply nexus-ai android ai ai-chat llm chatgpt openai anthropic claude gemini deepseek mistral grok groq openrouter byok kernelsu kernelsu-module webui root open-source
+          apply orbit-store android kernelsu kernelsu-module kernelsu-modules kernelsu-next sukisu apatch magisk-modules module-store module-repository module-manager app-store updater catalog awesome-list sha256 root webui hyperos open-source
+          apply apex-apps android app-manager kernelsu kernelsu-module kernelsu-next sukisu root webui debloat bloatware system-apps freeze-apps app-backup backup snapshots permissions battery-optimization background-restriction android-tools open-source
+          apply aegis-firewall android firewall android-firewall per-app-firewall kernelsu kernelsu-module kernelsu-next sukisu iptables ip6tables root webui privacy security network-security kill-switch lockdown no-vpn data-usage open-source
+          apply Sni-anti-dpi sni anti-dpi dpi-bypass deep-packet-inspection censorship-circumvention internet-freedom tls tls-fragmentation sni-spoofing networking network proxy bypass-censorship shell-script privacy research experimental work-in-progress testing open-source
+          apply kreza6173-pixel github-profile profile-readme readme android android-developer open-source shizuku root kernelsu magisk kotlin javascript webui android-tools power-tools privacy security xiaomi hyperos portfolio
+          apply kreza6173-pixel.github.io portfolio developer-portfolio github-pages personal-website static-site html css javascript svg android android-developer open-source shizuku root kernelsu power-tools privshell projects showcase no-build
