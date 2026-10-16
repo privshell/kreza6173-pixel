@@ -27,34 +27,34 @@ I poke at how Android apps actually behave once you're past the UI: permissions,
 
 | Project | What it does |
 |---|---|
-| [**PULSE // BATTERY**](https://github.com/kreza6173-pixel/pulse-battery) | Finds what drained your battery overnight and fixes it in one tap. Wakelocks, standby buckets, Doze, charge limit, APK and data backup |
-| [**VOID // APPS**](https://github.com/kreza6173-pixel/void-apps) | App manager that reads every change back before reporting it. Debloat presets, permissions, AppOps, autostart, network block, installer |
+| [**PULSE // BATTERY**](https://github.com/privshell/pulse-battery) | Finds what drained your battery overnight and fixes it in one tap. Wakelocks, standby buckets, Doze, charge limit, APK and data backup |
+| [**VOID // APPS**](https://github.com/privshell/void-apps) | App manager that reads every change back before reporting it. Debloat presets, permissions, AppOps, autostart, network block, installer |
 
 **KernelSU modules** · WebUI, installable from [KernelSU Modules](https://modules.kernelsu.org)
 
 | Project | What it does |
 |---|---|
-| [**AEGIS // FIREWALL**](https://github.com/kreza6173-pixel/aegis-firewall) | Kernel-level per-app firewall with host rules, screen-off blocking, live sockets and a lockdown switch. No VPN slot |
-| [**APEX // APPS**](https://github.com/kreza6173-pixel/apex-apps) | Root app manager with a safety list, reversible freeze, disable and hide, automatic snapshots and per-app battery policy |
-| [**ORBIT // STORE**](https://github.com/kreza6173-pixel/orbit-store) | Module store inside your root manager. Several catalogs in one place, sha256-verified installs and updates |
-| [**SELinux Manager**](https://github.com/kreza6173-pixel/selinux-manager) | See what SELinux blocks, find the app behind it and write the narrowest rule that fixes it, with a boot guard |
+| [**AEGIS // FIREWALL**](https://github.com/privshell/aegis-firewall) | Kernel-level per-app firewall with host rules, screen-off blocking, live sockets and a lockdown switch. No VPN slot |
+| [**APEX // APPS**](https://github.com/privshell/apex-apps) | Root app manager with a safety list, reversible freeze, disable and hide, automatic snapshots and per-app battery policy |
+| [**ORBIT // STORE**](https://github.com/privshell/orbit-store) | Module store inside your root manager. Several catalogs in one place, sha256-verified installs and updates |
+| [**SELinux Manager**](https://github.com/privshell/selinux-manager) | See what SELinux blocks, find the app behind it and write the narrowest rule that fixes it, with a boot guard |
 
 **Shevery modules** · no root, through Shizuku
 
 | Project | What it does |
 |---|---|
-| [**VOID//WALL**](https://github.com/kreza6173-pixel/VOID-WALL) | Root-optional firewall: Chain 3 blocking without root, iptables recipes with root |
-| [**VOID//PULSE**](https://github.com/kreza6173-pixel/void-pulse) | Sound and notification studio: EQ profiles, Do Not Disturb, per-app mute |
-| [**VOID//AUTOSTART**](https://github.com/kreza6173-pixel/void-autostart) | Stops apps from launching themselves at boot or in the background |
-| [**VOID//PURGE**](https://github.com/kreza6173-pixel/void-purge) | Cleaner for cache, leftover files, duplicates and background apps. Scans first, deletes only after you confirm |
-| [**PULSE // INSTALL**](https://github.com/kreza6173-pixel/pulse-install) | Installer for APK, APKS, XAPK and APKM, with split bundles and OBB files |
-| [**Privacy Audit**](https://github.com/kreza6173-pixel/privacy-audit) | Offline dashboard of sensitive permissions, revoke with one tap |
+| [**VOID//WALL**](https://github.com/privshell/VOID-WALL) | Root-optional firewall: Chain 3 blocking without root, iptables recipes with root |
+| [**VOID//PULSE**](https://github.com/privshell/void-pulse) | Sound and notification studio: EQ profiles, Do Not Disturb, per-app mute |
+| [**VOID//AUTOSTART**](https://github.com/privshell/void-autostart) | Stops apps from launching themselves at boot or in the background |
+| [**VOID//PURGE**](https://github.com/privshell/void-purge) | Cleaner for cache, leftover files, duplicates and background apps. Scans first, deletes only after you confirm |
+| [**PULSE // INSTALL**](https://github.com/privshell/pulse-install) | Installer for APK, APKS, XAPK and APKM, with split bundles and OBB files |
+| [**Privacy Audit**](https://github.com/privshell/privacy-audit) | Offline dashboard of sensitive permissions, revoke with one tap |
 
 **Tools**
 
 | Project | What it does |
 |---|---|
-| [**Android App Hub**](https://github.com/kreza6173-pixel/android-app-hub) | Self-hosted catalog of Shizuku and root app lists, runs in Termux, tracks what changed |
+| [**Android App Hub**](https://github.com/privshell/android-app-hub) | Self-hosted catalog of Shizuku and root app lists, runs in Termux, tracks what changed |
 
 ### contact
 

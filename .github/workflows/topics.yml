@@ -14,7 +14,7 @@ jobs:
           apply() {
             repo=$1; shift
             for t in "$@"; do echo "$t"; done | jq -R . | jq -s '{names: .}' > body.json
-            n=$(gh api -X PUT "repos/kreza6173-pixel/$repo/topics" --input body.json --jq '.names | length')
+            n=$(gh api -X PUT "repos/privshell/$repo/topics" --input body.json --jq '.names | length')
             echo "$repo: $n topics"
           }
           apply void-apps android app-manager shizuku no-root adb debloat bloatware-remover package-manager permission-manager appops autostart boot-receivers network-blocker apk-installer xapk app-snapshots kotlin jetpack-compose hyperos open-source
@@ -32,5 +32,5 @@ jobs:
           apply apex-apps android app-manager kernelsu kernelsu-module kernelsu-next sukisu root webui debloat bloatware system-apps freeze-apps app-backup backup snapshots permissions battery-optimization background-restriction android-tools open-source
           apply aegis-firewall android firewall android-firewall per-app-firewall kernelsu kernelsu-module kernelsu-next sukisu iptables ip6tables root webui privacy security network-security kill-switch lockdown no-vpn data-usage open-source
           apply Sni-anti-dpi sni anti-dpi dpi-bypass deep-packet-inspection censorship-circumvention internet-freedom tls tls-fragmentation sni-spoofing networking network proxy bypass-censorship shell-script privacy research experimental work-in-progress testing open-source
-          apply kreza6173-pixel github-profile profile-readme readme android android-developer open-source shizuku root kernelsu magisk kotlin javascript webui android-tools power-tools privacy security xiaomi hyperos portfolio
-          apply kreza6173-pixel.github.io portfolio developer-portfolio github-pages personal-website static-site html css javascript svg android android-developer open-source shizuku root kernelsu power-tools privshell projects showcase no-build
+          apply privshell github-profile profile-readme readme android android-developer open-source shizuku root kernelsu magisk kotlin javascript webui android-tools power-tools privacy security xiaomi hyperos portfolio
+          apply privshell.github.io portfolio developer-portfolio github-pages personal-website static-site html css javascript svg android android-developer open-source shizuku root kernelsu power-tools privshell projects showcase no-build
